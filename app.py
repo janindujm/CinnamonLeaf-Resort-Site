@@ -42,4 +42,4 @@ def delete_booking(booking_id):
     return jsonify({"message": "Booking deleted"})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
