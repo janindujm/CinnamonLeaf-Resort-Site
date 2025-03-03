@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!-- Link to your stylesheets in the static folder -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>Web Design Mastery | Miranda</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__bar">
+        <div class="nav__header">
+          <div class="logo nav__logo">
+            <div>C</div>
+            <span>CINNAMON LEAF<br />LEASURE RESORT</span>
+          </div>
+          <div class="nav__menu__btn" id="menu-btn">
+            <i class="ri-menu-line"></i>
+          </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#room">Room</a></li>
+          <li><a href="#feature">Feature</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#news">News</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <header class="header" id="home">
+      <div class="section__container header__container">
+        <p class="section__subheader">ABOUT US</p>
+        <h1>Your Leisure<br />Partner</h1>
+        <button class="btn">Take A Tour</button>
+      </div>
+    </header>
+
+    <section class="booking">
+      <div class="section__container booking__container">
+        <form action="/">
+          <div class="input__group">
+            <label for="arrival">Arrival Date</label>
+            <input type="text" placeholder="Your Arrival Date" />
+          </div>
+          <div class="input__group">
+            <label for="departure">Departure Date</label>
+            <input type="text" placeholder="Your Departure Date" />
+          </div>
+          <div class="input__group">
+            <label for="guests">Guests</label>
+            <input type="text" placeholder="No Of Guests" />
+          </div>
+          <button class="btn">Check Availability</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="section__container about__container">
+        <div class="about__grid">
+          <div class="about__image">
+            <img src="{{ url_for('static', filename='images/about-1.jpg') }}" alt="about" />
+          </div>
+          <div class="about__card">
+            <span><i class="ri-user-line"></i></span>
+            <h4>Strong Team</h4>
+            <p>
+              Unlocking Hospitality Excellence And Ensures Your Perfect Stay
+            </p>
+          </div>
+          <div class="about__image">
+            <img src="{{ url_for('static', filename='images/about-2.jpg') }}" alt="about" />
+          </div>
+          <div class="about__card">
+            <span><i class="ri-calendar-check-line"></i></span>
+            <h4>Luxury Room</h4>
+            <p>Experience Unrivaled Luxury at Our Exquisite Luxury Rooms</p>
+          </div>
+        </div>
+        <div class="about__content">
+          <p class="section__subheader">ABOUT US</p>
+          <h2 class="section__header">Discover Our Underground</h2>
+          <p class="section__description">
+            Welcome to a hidden realm of extraordinary accommodations where
+            luxury, comfort, and adventure converge. Our underground hotels
+            offer an unparalleled escape from the ordinary, inviting you to
+            explore a subterranean world of wonders.
+          </p>
+          <button class="btn">Book Now</button>
+        </div>
+      </div>
+    </section>
+    <section class="map__section">
+      <div class="section__container">
+        <h2>Find Us Here</h2>
+        <p>Visit us at our location and enjoy the best leisure experience.</p>
+        <div class="map__container">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d18855.318875303416!2d80.25668877940404!3d6.541562657704046!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae3cf00050a088f%3A0x7fc065d0d065590c!2scinnamon%20Leaf%20Leisure%20resort!5e0!3m2!1sen!2slk!4v1740970484248!5m2!1sen!2slk" 
+            width="600" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+
+        </div>
+      </div>
+    </section>
+    
+
+    <section class="room__container" id="room">
+      <p class="section__subheader">ROOMS</p>
+      <h2 class="section__header">Hand Picked Rooms</h2>
+      <div class="room__grid">
+        <div class="room__card">
+          <img src="{{ url_for('static', filename='images/foods.jpg') }}" alt="room" />
+          <div class="room__card__details">
+            <div>
+              <h4>Deluxe Suite</h4>
+              <p>Well-appointed rooms designed for guests who desire a more.</p>
+            </div>
+            <h3>$399<span>/night</span></h3>
+          </div>
+        </div>
+        <div class="room__card">
+          <img src="{{ url_for('static', filename='images/archery.jpg') }}" alt="room" />
+          <div class="room__card__details">
+            <div>
+              <h4>Family Suite</h4>
+              <p>Consist of multiple rooms and a common living area.</p>
+            </div>
+            <h3>$599<span>/night</span></h3>
+          </div>
+        </div>
+        <div class="room__card">
+          <img src="{{ url_for('static', filename='images/room-3.jpg') }}" alt="room" />
+          <div class="room__card__details">
+            <div>
+              <h4>Luxury Penthouse</h4>
+              <p>
+                Top-tier accommodations usually on the highest floors of a
+                hotel.
+              </p>
+            </div>
+            <h3>$799<span>/night</span></h3>
+          </div>
+        </div>
+        <div class="room__card">
+          <img src="{{ url_for('static', filename='images/v2.jpg') }}" alt="room" />
+          <div class="room__card__details">
+            <div>
+              <h4>Luxury Penthouse</h4>
+              <p>
+                Top-tier accommodations usually on the highest floors of a
+                hotel.
+              </p>
+            </div>
+            <h3>$799<span>/night</span></h3>
+          </div>
+        </div>        <div class="room__card">
+          <img src="{{ url_for('static', filename='images/v1.jpg') }}" alt="room" />
+          <div class="room__card__details">
+            <div>
+              <h4>Luxury Penthouse</h4>
+              <p>
+                Top-tier accommodations usually on the highest floors of a
+                hotel.
+              </p>
+            </div>
+            
+          </div>
+        </div>        <div class="room__card">
+          <img src="{{ url_for('static', filename='images/v3.jpg') }}" alt="room" />
+          <div class="room__card__details">
+            <div>
+              <h4>Luxury Penthouse</h4>
+              <p>
+                Top-tier accommodations usually on the highest floors of a
+                hotel.
+              </p>
+            </div>
+            
+          </div>
+        </div>        <div class="room__card">
+          <img src="{{ url_for('static', filename='images/v4.jpg') }}" alt="room" />
+          <div class="room__card__details">
+            <div>
+              <h4>Luxury Penthouse</h4>
+              <p>
+                Top-tier accommodations usually on the highest floors of a
+                hotel.
+              </p>
+            </div>
+            
+          </div>
+        </div>        
+        <div class="room__card">
+          <img src="{{ url_for('static', filename='images/v5.jpg') }}" alt="room" />
+          <div class="room__card__details">
+            <div>
+              <h4>Luxury Penthouse</h4>
+              <p>
+                Top-tier accommodations usually on the highest floors of a
+                hotel.
+              </p>
+            </div>
+            
+          </div>
+        </div>
+        <div class="room__card">
+          <img src="{{ url_for('static', filename='images/food.jpg') }}" alt="room" />
+          <div class="room__card__details">
+            <div>
+              <h4>Luxury Penthouse</h4>
+              <p>
+                Top-tier accommodations usually on the highest floors of a
+                hotel.
+              </p>
+            </div>
+            
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="intro">
+      <div class="section__container intro__container">
+        <div class="intro__cotent">
+          <p class="section__subheader">INTRO VIDEO</p>
+          <h2 class="section__header">Meet With Our Luxury Place</h2>
+          <p class="section__description">
+            Whether you're seeking a cozy and exclusive hideaway or an immersive
+            journey beneath the surface, Hotel Miranda promises to be an
+            unforgettable stay, where the depths of comfort and excitement await
+            your arrival.
+          </p>
+          <button class="btn">Book Now</button>
+        </div>
+        <div class="intro__video">
+          <video src="{{ url_for('static', filename='images/luxury.mp4') }}" autoplay muted loop></video>
+        </div>
+      </div>
+    </section>
+
+
+    
+
+    <section class="section__container feature__container" id="feature">
+      <p class="section__subheader">FACILITIES</p>
+      <h2 class="section__header">Core Features</h2>
+      <div class="feature__grid">
+        <div class="feature__card">
+          <span><i class="ri-thumb-up-line"></i></span>
+          <h4>Have High Rating</h4>
+          <p>
+            We take pride in curating a selection of hotels that consistently
+            receive high ratings and positive reviews.
+          </p>
+        </div>
+        <div class="feature__card">
+          <span><i class="ri-time-line"></i></span>
+          <h4>Quite Hours</h4>
+          <p>
+            We understand that peace and uninterrupted rest are essential for a
+            rejuvenating experience.
+          </p>
+        </div>
+        <div class="feature__card">
+          <span><i class="ri-map-pin-line"></i></span>
+          <h4>Best Location</h4>
+          <p>
+            At our hotel booking website, we take pride in offering
+            accommodations in the most prime and sought-after locations.
+          </p>
+        </div>
+        <div class="feature__card">
+          <span><i class="ri-close-circle-line"></i></span>
+          <h4>Free Cancellation</h4>
+          <p>
+            We understand that travel plans can change unexpectedly, which is
+            why we offer the flexibility of free cancellation.
+          </p>
+        </div>
+        <div class="feature__card">
+          <span><i class="ri-wallet-line"></i></span>
+          <h4>Payment Options</h4>
+          <p>
+            Our hotel booking website offers a range of convenient payment
+            options to suit your preferences.
+          </p>
+        </div>
+        <div class="feature__card">
+          <span><i class="ri-coupon-line"></i></span>
+          <h4>Special Offers</h4>
+          <p>
+            Whether you're planning a romantic getaway, or a business trip, our
+            carefully curated special offers cater to all your needs.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu" id="menu">
+      <div class="section__container menu__container">
+        <div class="menu__header">
+          <div>
+            <p class="section__subheader">MENU</p>
+            <h2 class="section__header">Our Food Menu</h2>
+          </div>
+          <div class="section__nav">
+            <span><i class="ri-arrow-left-line"></i></span>
+            <span><i class="ri-arrow-right-line"></i></span>
+          </div>
+        </div>
+        <ul class="menu__items">
+          <li>
+            <img src="{{ url_for('static', filename='images/menu-1.jpg') }}" alt="menu" />
+            <div class="menu__details">
+              <h4>Fggs & Bacon</h4>
+              <p>
+                It is a culinary innovation that puts a unique spin on the
+                beloved breakfast combination.
+              </p>
+            </div>
+          </li>
+          <li>
+            <img src="{{ url_for('static', filename='images/menu-2.jpg') }}" alt="menu" />
+            <div class="menu__details">
+              <h4>Tea or Coffee</h4>
+              <p>
+                A classic choice for your daily dose of comfort and calmness.
+              </p>
+            </div>
+          </li>
+          <li>
+            <img src="{{ url_for('static', filename='images/menu-3.jpg') }}" alt="menu" />
+            <div class="menu__details">
+              <h4>Sweet Pancakes</h4>
+              <p>
+                Fluffy and light, our sweet pancakes are perfect for breakfast or
+                dessert.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="news" id="news">
+      <div class="section__container news__container">
+        <p class="section__subheader">NEWS</p>
+        <h2 class="section__header">Our Latest News</h2>
+        <div class="news__grid">
+          <div class="news__card">
+            <img src="{{ url_for('static', filename='images/news-1.jpg') }}" alt="news" />
+            <h4>The Hotel Just Got Bigger</h4>
+            <p>
+              Our hotel is expanding with more luxurious rooms and amenities to
+              make your stay even more unforgettable.
+            </p>
+          </div>
+          <div class="news__card">
+            <img src="{{ url_for('static', filename='images/news-2.jpg') }}" alt="news" />
+            <h4>Grand Opening Of The Pool</h4>
+            <p>
+              We are excited to announce the grand opening of our brand-new pool
+              facilities, designed for relaxation and fun.
+            </p>
+          </div>
+          <div class="news__card">
+            <img src="{{ url_for('static', filename='images/news-3.jpg') }}" alt="news" />
+            <h4>Discover Our Exquisite Dining</h4>
+            <p>
+              Savor the finest cuisine with our exclusive dining experience,
+              carefully crafted to delight your taste buds.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="site-footer__container">
+        <div class="site-footer__left">
+          <h2 class="site-footer__title">Cinnamon Leaf</h2>
+          <p class="site-footer__description">
+            Experience the finest hospitality, where luxury meets comfort and unforgettable moments await.
+          </p>
+        </div>
+        <div class="site-footer__right">
+          <div class="site-footer__socials">
+            <span class="site-footer__follow-text">Follow us:</span>
+            <a href="#" class="site-footer__social-link">Instagram</a>
+            <a href="#" class="site-footer__social-link">Facebook</a>
+            <a href="#" class="site-footer__social-link">Twitter</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    
+    
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const navLinks = document.getElementById("nav-links");
+      const menuBtnIcon = menuBtn.querySelector("i");
+
+      menuBtn.addEventListener("click", () => {
+          navLinks.classList.toggle("open");
+          const isOpen = navLinks.classList.contains("open");
+          menuBtnIcon.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line");
+      });
+
+      navLinks.addEventListener("click", () => {
+          navLinks.classList.remove("open");
+          menuBtnIcon.setAttribute("class", "ri-menu-line");
+      });
+
+      const scrollRevealOption = { distance: "50px", origin: "bottom", duration: 1000 };
+
+      ScrollReveal().reveal(".header__container .section__subheader", { ...scrollRevealOption });
+      ScrollReveal().reveal(".header__container h1", { ...scrollRevealOption, delay: 500 });
+      ScrollReveal().reveal(".header__container .btn", { ...scrollRevealOption, delay: 1000 });
+      ScrollReveal().reveal(".room__card", { ...scrollRevealOption, interval: 500 });
+      ScrollReveal().reveal(".feature__card", { ...scrollRevealOption, interval: 500 });
+      ScrollReveal().reveal(".news__card", { ...scrollRevealOption, interval: 500 });
+  </script>
+  </body>
+</html>
